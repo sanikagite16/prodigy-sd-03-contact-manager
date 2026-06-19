@@ -417,8 +417,17 @@ text-align:left;
 @media (max-width: 768px){
 
     h1{
-        font-size: 2rem;
-    }
+    font-size:1.5rem;
+    line-height:1.2;
+
+    .contact-form{
+    grid-template-columns:1fr;
+}
+}
+
+.container{
+    padding:20px;
+}
 
     .action-buttons{
         flex-wrap: wrap;
@@ -428,4 +437,14 @@ text-align:left;
         grid-template-columns: 1fr;
     }
 
+}
+
+#themeBtn{
+    width:45px;
+    height:45px;
+    font-size:18px;
+}
+
+.filters{
+    justify-content:center;
 }
