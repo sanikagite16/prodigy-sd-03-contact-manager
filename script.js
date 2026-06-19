@@ -446,7 +446,15 @@ function toggleFavorite(id){
 
 }
 
-function filterContacts(type){
+function filterContacts(type, btn){
+
+    document
+    .querySelectorAll(".filters button")
+    .forEach(button =>
+        button.classList.remove("filter-active")
+    );
+
+    btn.classList.add("filter-active");
 
     currentFilter = type;
 

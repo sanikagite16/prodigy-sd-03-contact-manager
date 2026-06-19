@@ -10,7 +10,7 @@
 }
 
 body{
-    min-height:180px;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -84,6 +84,19 @@ button:hover{
     gap:10px;
     flex-wrap:wrap;
     margin-bottom:20px;
+}
+
+.filter-active{
+    background:#bfc5cc;
+    font-weight:700;
+}
+
+.filters button{
+    transform:none !important;
+}
+
+.filter-active:hover{
+    transform:none;
 }
 
 #contactCount{

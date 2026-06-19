@@ -81,19 +81,19 @@ onkeyup="searchContacts()"
 <div class="filters">
 
 
-<button onclick="filterContacts('All')">All</button>
+<button class="filter-active" onclick="filterContacts('All', this)">All</button>
 
-<button onclick="filterContacts('Favorites')">⭐ Favorites</button>
+<button onclick="filterContacts('Favorites', this)">⭐ Favorites</button>
 
-<button onclick="filterContacts('Blocked')">🚫 Blocked</button>
+<button onclick="filterContacts('Blocked', this)">🚫 Blocked</button>
 
-<button onclick="filterContacts('Family')">Family</button>
+<button onclick="filterContacts('Family', this)">Family</button>
 
-<button onclick="filterContacts('Friends')">Friends</button>
+<button onclick="filterContacts('Friends', this)">Friends</button>
 
-<button onclick="filterContacts('Work')">Work</button>
+<button onclick="filterContacts('Work', this)">Work</button>
 
-<button onclick="filterContacts('Emergency')">Emergency</button>
+<button onclick="filterContacts('Emergency', this)">Emergency</button>
 
 <select onchange="sortContacts(this.value)">
 
