@@ -135,9 +135,27 @@ else if(currentFilter !== "All"){
 
 }
 
- if(
-filteredContacts.length === 0
-){
+ if(filteredContacts.length === 0){
+
+if(contacts.length === 0){
+
+contactList.innerHTML = `
+
+<div class="not-found">
+
+📇 No Contacts Yet
+
+<br><br>
+
+Add your first contact to get started.
+
+</div>
+
+`;
+
+}
+
+else{
 
 contactList.innerHTML = `
 
@@ -147,12 +165,13 @@ contactList.innerHTML = `
 
 <br><br>
 
-Try searching with another
-name or phone number.
+Try searching with another name or phone number.
 
 </div>
 
 `;
+
+}
 
 updateCount(filteredContacts.length);
 
