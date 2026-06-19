@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Contact Manager</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <button id="themeBtn"
+onclick="toggleTheme()">
+
+🌙
+
+</button>
+
+<h1>📇 Smart Contact Manager</h1>
+
+<p class="tagline">
+Manage, Organize & Prioritize Your Contacts
+</p>
+
+<div class="contact-form">
+
+<input
+type="text"
+id="name"
+placeholder="Enter Name"
+>
+
+<input
+type="text"
+id="phone"
+placeholder="Enter Phone Number"
+>
+
+<input
+type="email"
+id="email"
+placeholder="Enter Email"
+>
+
+<select id="category">
+
+<option>Family</option>
+
+<option>Friends</option>
+
+<option>Work</option>
+
+<option>Emergency</option>
+
+</select>
+
+<button onclick="addContact()">
+Add Contact
+</button>
+
+</div>
+
+<input
+type="text"
+id="search"
+placeholder="Search by Name or Phone"
+onkeyup="searchContacts()"
+>
+
+<div class="filters">
+
+
+<button onclick="filterContacts('All')">All</button>
+
+<button onclick="filterContacts('Favorites')">⭐ Favorites</button>
+
+<button onclick="filterContacts('Blocked')">🚫 Blocked</button>
+
+<button onclick="filterContacts('Family')">Family</button>
+
+<button onclick="filterContacts('Friends')">Friends</button>
+
+<button onclick="filterContacts('Work')">Work</button>
+
+<button onclick="filterContacts('Emergency')">Emergency</button>
+
+<select onchange="sortContacts(this.value)">
+
+<option value="">🔤 Sort</option>
+
+<option value="az">A → Z</option>
+
+<option value="za">Z → A</option>
+
+</select>
+
+</div>
+
+<h3 id="contactCount">
+Total Contacts: 0
+</h3>
+
+<div id="contactList">
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+<div id="toast"></div>
+
+</body>
+</html>
