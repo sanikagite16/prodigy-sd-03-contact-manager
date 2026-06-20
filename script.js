@@ -683,6 +683,8 @@ toast.classList.remove(
 
 function toggleMenu(id,event){
 
+    console.log("Menu clicked", id);
+
     if(event){
         event.stopPropagation();
     }
@@ -697,8 +699,12 @@ function toggleMenu(id,event){
 
     });
 
-    let menu =
-    document.getElementById(`menu-${id}`);
+    const menu =
+document.getElementById(`menu-${id}`);
+
+if(!menu){
+    return;
+}
 
     menu.style.display =
     menu.style.display === "block"

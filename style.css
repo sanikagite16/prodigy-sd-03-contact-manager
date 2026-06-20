@@ -430,6 +430,7 @@ margin-bottom:5px;
 text-align:left;
 
 }
+
 @media (max-width:768px){
 
     body{
@@ -459,6 +460,10 @@ text-align:left;
     top:10px;
     right:10px;
 }
+
+.contact-card:last-child{
+        margin-bottom:50px;
+    }
     
     .tagline{
         font-size:1rem;
