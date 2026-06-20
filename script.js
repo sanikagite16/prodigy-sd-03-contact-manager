@@ -438,6 +438,12 @@ function toggleFavorite(id){
         JSON.stringify(contacts)
     );
 
+    document
+.querySelectorAll(".popup-menu")
+.forEach(menu => {
+    menu.style.display = "none";
+});
+
     displayContacts();
 
     showToast(
