@@ -218,7 +218,7 @@ ${contact.favorite ? '⭐ Favorite' : '☆ Favorite'}
 </button>
 
 <button class="menu-btn"
-onclick="toggleMenu(${contact.id})">
+onclick="toggleMenu(${contact.id}, event)">
 ⋮
 </button>
 
@@ -675,36 +675,29 @@ toast.classList.remove(
 
 }
 
-function toggleMenu(id){
+function toggleMenu(id,event){
+
+    if(event){
+        event.stopPropagation();
+    }
 
     document
     .querySelectorAll(".popup-menu")
     .forEach(menu => {
 
         if(menu.id !== `menu-${id}`){
-
             menu.style.display = "none";
-
         }
 
     });
 
     let menu =
-    document.getElementById(
-        `menu-${id}`
-    );
+    document.getElementById(`menu-${id}`);
 
-    if(menu.style.display === "block"){
-
-        menu.style.display = "none";
-
-    }
-
-    else{
-
-        menu.style.display = "block";
-
-    }
+    menu.style.display =
+    menu.style.display === "block"
+    ? "none"
+    : "block";
 
 }
 
@@ -736,7 +729,6 @@ ${contact.lastCalled || "Never"}`
 );
 
 }
-
 document.addEventListener("click", function(event){
 
     if(
